@@ -33,13 +33,76 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  void _healthCount1() {
+    if (_value1==3){
+      _health++;
+    }else if (_value1 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
+  void _healthCount2() {
+    if (_value2==3){
+      _health++;
+    }else if (_value2 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
+  void _healthCount3() {
+    if (_value3==3){
+      _health++;
+    }else if (_value3 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
+  void _healthCount4() {
+    if (_value4==3){
+      _health++;
+    }else if (_value4 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
+  void _healthCount5() {
+    if (_value5==3){
+      _health++;
+    }else if (_value5 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
+  void _healthCount6() {
+    if (_value6==3){
+      _health++;
+    }else if (_value6 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
+  void _healthCount7() {
+    if (_value7==3){
+      _health++;
+    }else if (_value7 == 4) {
+      _health = _health + 2;
+    }else {
+      _health = _health;
+    }
+  }
   void _judge() {
-    if (_health > 3) {
+    if (_health > 2) {
       showDialog(
         context: context,
         builder: (_) {
           return AlertDialog(
-            content: Text("危険"),
+            content: Text("疲れているよ、十分頑張っているから休めるだけ休んでね"),
             actions: <Widget>[
               // ボタン領域
               FlatButton(
@@ -55,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         context: context,
         builder: (_) {
           return AlertDialog(
-            content: Text("注意"),
+            content: Text("疲れ気味だよ、自分の体を大切にね"),
             actions: <Widget>[
               // ボタン領域
               FlatButton(
@@ -71,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
         context: context,
         builder: (_) {
           return AlertDialog(
-            content: Text("大丈夫"),
+            content: Text("数値上はまだ大丈夫だよ、でも、心の声を優先して休んでね"),
             actions: <Widget>[
               // ボタン領域
               FlatButton(
@@ -83,6 +146,9 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       );
     }
+  }
+  void _clear() {
+    _health=0;
   }
   int _value1 = 1;
   int _value2 = 1;
@@ -129,15 +195,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value1==3){
-                    _health++;
-                  }else if (_value1 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value1 = value;
@@ -166,15 +223,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value2==3){
-                    _health++;
-                  }else if (_value2 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value2 = value;
@@ -203,15 +251,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value3==3){
-                    _health++;
-                  }else if (_value3 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value3 = value;
@@ -240,15 +279,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value4==3){
-                    _health++;
-                  }else if (_value4 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value4 = value;
@@ -277,15 +307,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value5==3){
-                    _health++;
-                  }else if (_value5 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value5 = value;
@@ -314,15 +335,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value6==3){
-                    _health++;
-                  }else if (_value6 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value6 = value;
@@ -365,11 +377,29 @@ class _MyHomePageState extends State<MyHomePage> {
                     _value7 = value;
                   });
                 }),
-            RaisedButton(
-              child: Text("決定"),
-              onPressed: () {
-                _judge();
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RaisedButton(
+                  child: Text("決定"),
+                  onPressed: () {
+                    _judge();
+                    _healthCount1();
+                    _healthCount2();
+                    _healthCount3();
+                    _healthCount4();
+                    _healthCount5();
+                    _healthCount6();
+                    _healthCount7();
+                  },
+                ),
+                RaisedButton(
+                  child: Text("リセット"),
+                  onPressed: () {
+                    _clear();
+                  },
+                ),
+              ],
             )
           ],
         ),
