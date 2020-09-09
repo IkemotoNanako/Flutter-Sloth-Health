@@ -374,7 +374,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 RaisedButton(
                   child: Text("決定"),
                   onPressed: () {
-                    _judge();
                     _healthCount1();
                     _healthCount2();
                     _healthCount3();
@@ -382,6 +381,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     _healthCount5();
                     _healthCount6();
                     _healthCount7();
+                    _judge();
                   },
                 ),
                 RaisedButton(
