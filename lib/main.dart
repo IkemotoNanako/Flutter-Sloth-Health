@@ -149,6 +149,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   void _clear() {
     _health=0;
+    setState(() {
+      _value1 = 1;
+      _value2 = 1;
+      _value3 = 1;
+      _value4 = 1;
+      _value5 = 1;
+      _value6 = 1;
+      _value7 = 1;
+    });
   }
   int _value1 = 1;
   int _value2 = 1;
