@@ -363,15 +363,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       value: 4
                   )
                 ],
-                onTap: () {
-                  if (_value7==3){
-                    _health++;
-                  }else if (_value7 == 4) {
-                    _health = _health + 2;
-                  }else {
-                    _health = _health;
-                  }
-                },
                 onChanged: (value) {
                   setState(() {
                     _value7 = value;
