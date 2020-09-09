@@ -33,6 +33,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  //health変数を✕、？のとき＋１、＋２していっている
   void _healthCount1() {
     if (_value1==3){
       _health++;
@@ -96,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _health = _health;
     }
   }
+  //health変数の値によって体調通知を三段階に変化させている
   void _judge() {
     if (_health > 2) {
       showDialog(
@@ -147,6 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     }
   }
+  //選択肢とhealth変数をリセットしている
   void _clear() {
     _health=0;
     setState(() {
@@ -159,14 +162,14 @@ class _MyHomePageState extends State<MyHomePage> {
       _value7 = 1;
     });
   }
-  int _value1 = 1;
-  int _value2 = 1;
-  int _value3 = 1;
-  int _value4 = 1;
-  int _value5 = 1;
-  int _value6 = 1;
-  int _value7 = 1;
-  int _health = 0;
+  int _value1 = 1;//選択肢区別のための変数
+  int _value2 = 1;//選択肢区別のための変数
+  int _value3 = 1;//選択肢区別のための変数
+  int _value4 = 1;//選択肢区別のための変数
+  int _value5 = 1;//選択肢区別のための変数
+  int _value6 = 1;//選択肢区別のための変数
+  int _value7 = 1;//選択肢区別のための変数
+  int _health = 0;//体調判定のための変数
   @override
   Widget build(BuildContext context) {
 
