@@ -186,6 +186,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               '寝つきはよかったですか？',
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             DropdownButton(
                 value: _value1,
@@ -214,6 +217,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
             Text(
               '寝起きはよかったですか？',
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             DropdownButton(
                 value: _value2,
@@ -242,6 +248,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
             Text(
               '睡眠の質はよかったですか？',
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             DropdownButton(
                 value: _value3,
@@ -270,6 +279,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
             Text(
               '心は安定してますか？',
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             DropdownButton(
                 value: _value4,
@@ -298,6 +310,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
             Text(
               '食欲はありますか？',
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             DropdownButton(
                 value: _value5,
@@ -326,6 +341,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
             Text(
               '気力はありますか？',
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             DropdownButton(
                 value: _value6,
@@ -354,6 +372,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
             Text(
               '体調は良いと感じますか？',
+              style: TextStyle(
+              fontSize: 20,
+            ),
             ),
             DropdownButton(
                 value: _value7,
@@ -396,6 +417,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     _judge();
                   },
                 ),
+                Container(child: Text("    "),),
                 RaisedButton(
                   child: Text("リセット"),
                   onPressed: () {
